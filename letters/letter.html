@@ -3,114 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prayer Letter</title>
+    <title>The Portillo Family - Prayer Letter</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
-            padding: 40px 20px;
-            min-height: 100vh;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .header {
+            background: linear-gradient(135deg, #2d7a4e 0%, #4a9d6f 100%);
+            color: white;
+            padding: 50px 30px;
             text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
         }
-        h1 {
-            color: #2980b9;
-            font-size: 2.2em;
-            margin-bottom: 10px;
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            font-weight: 600;
         }
-        .subtitle {
-            color: #7f8c8d;
-            font-style: italic;
+        .header p {
             font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 40px 35px;
         }
         h2 {
-            color: #2980b9;
-            font-size: 1.6em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-            padding-left: 12px;
+            background: #4a9d6f;
+            color: white;
+            padding: 12px 18px;
+            margin: 30px 0 15px 0;
+            border-radius: 4px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        h2:first-of-type {
+            margin-top: 0;
         }
         p {
             margin-bottom: 15px;
             line-height: 1.8;
+            text-align: justify;
         }
-        ul { margin: 15px 0 15px 30px; }
-        li { margin-bottom: 8px; line-height: 1.7; }
-        .greeting {
-            font-size: 1.05em;
-            margin-bottom: 20px;
-            color: #34495e;
+        ul {
+            margin: 15px 0 15px 25px;
+            list-style: none;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: "▪";
+            color: #4a9d6f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
         .images {
-            margin-top: 50px;
+            margin-top: 40px;
             padding-top: 30px;
             border-top: 2px solid #ecf0f1;
         }
-        .images h2 { color: #27ae60; }
+        .images h2 {
+            background: #4a9d6f;
+        }
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
         .image-item {
             text-align: center;
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 6px;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
         }
         .image-item img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 3px;
+            display: block;
         }
         .image-item p {
-            font-size: 0.85em;
-            color: #7f8c8d;
-            margin-top: 8px;
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 6px;
+            text-align: center;
         }
         .closing {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-        }
-        .signature {
-            margin-top: 15px;
-            font-weight: 500;
-        }
-        .footer {
-            text-align: center;
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid #ecf0f1;
-            color: #95a5a6;
-            font-size: 0.9em;
+        }
+        .signature {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #2d7a4e;
+        }
+        .footer {
+            background: #f9f9f9;
+            text-align: center;
+            padding: 15px;
+            color: #999;
+            font-size: 0.85em;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Prayer Letter</h1>
-            <p class="subtitle">Ricardo Portillo Ministry in Nicaragua</p>
+            <h1>The Portillo Family</h1>
+            <p>Nicaragua • Central America</p>
         </div>
+        <div class="content">
 <p>Dear Friends and Prayer Partners,</p>
 <p>Greetings from Nicaragua! I want to share some wonderful updates from this month's work and ministry.</p>
 <h2>Ministry Updates</h2>
@@ -198,16 +218,10 @@
             </div>
         </div>
 
-        <div class="closing">
-            <p>Thank you for your prayers and partnership in ministry.</p>
-            <div class="signature">
-                Blessings,<br>
-                Ricardo Portillo
-            </div>
         </div>
 
         <div class="footer">
-            <p>Prayer Letter • June 2026</p>
+            Prayer Letter • June 2026
         </div>
     </div>
 </body>
