@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricardo Portillo - Prayer Letters</title>
+    <title>The Portillo Family - Prayer Letters from Nicaragua</title>
     <style>
         * {
             margin: 0;
@@ -13,140 +13,195 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
             min-height: 100vh;
-            padding: 40px 20px;
+            color: #333;
+        }
+
+        .flag-banner {
+            background: linear-gradient(90deg, #0052B4 0%, #0052B4 25%, white 25%, white 50%, #0052B4 50%, #0052B4 75%, #CE1126 75%, #CE1126 100%);
+            height: 40px;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
         .header {
             text-align: center;
-            color: white;
             margin-bottom: 50px;
+            background: white;
+            padding: 50px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            color: #5a9467;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
+            font-size: 1.15em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            color: #999;
+            font-style: italic;
         }
 
         .current-letter {
             background: white;
-            padding: 30px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 12px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #5a9467;
         }
 
         .current-letter h2 {
-            color: #667eea;
+            color: #5a9467;
             margin-bottom: 15px;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+            font-size: 1.8em;
+            font-weight: 600;
         }
 
         .current-letter p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05em;
         }
 
         .current-letter a {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #5a9467 0%, #4a8557 100%);
             color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 14px 30px;
+            border-radius: 6px;
             text-decoration: none;
-            margin-right: 10px;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(90, 148, 103, 0.3);
+            font-size: 1.05em;
         }
 
         .current-letter a:hover {
-            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(90, 148, 103, 0.4);
         }
 
         .archive {
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .archive h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+            color: #5a9467;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            font-weight: 600;
         }
 
         .letter-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .letter-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #5a9467;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .letter-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(90, 148, 103, 0.15);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
         }
 
         .letter-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.1em;
+            color: #5a9467;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+            font-weight: 600;
         }
 
         .letter-card a {
-            color: #667eea;
+            color: #5a9467;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: color 0.3s;
         }
 
         .letter-card a:hover {
+            color: #4a8557;
             text-decoration: underline;
         }
 
         .footer {
             text-align: center;
-            color: white;
-            margin-top: 50px;
-            opacity: 0.8;
+            color: #666;
+            margin-top: 60px;
+            padding: 30px;
+            font-size: 1.1em;
+        }
+
+        .footer p {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .current-letter, .archive {
+                padding: 25px;
+            }
+
+            .letter-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="flag-banner"></div>
+
     <div class="container">
         <div class="header">
-            <h1>📖 Ricardo Portillo's Prayer Letters</h1>
-            <p>Ministry Updates from Nicaragua</p>
+            <h1>The Portillo Family</h1>
+            <p>Prayer Letters from Nicaragua</p>
+            <p class="subtitle">Central America — Serving in Ministry & Outreach</p>
         </div>
 
         <div class="current-letter">
             <h2>Latest Prayer Letter</h2>
-            <p>Welcome! Below you can read the latest prayer letter and browse past updates from Ricardo's ministry work in Nicaragua.</p>
+            <p>Welcome to our prayer letter ministry! Here you'll find monthly updates on our work in Nicaragua, testimonies of God's faithfulness, and specific prayer requests. We're grateful for your partnership in the Gospel.</p>
             <a href="letters/2026-06.html">Read Current Letter →</a>
         </div>
 
         <div class="archive">
-            <h2>📚 Archive</h2>
+            <h2>📚 Prayer Letter Archive</h2>
             <div class="letter-grid">
                 <div class="letter-card">
                     <h3>June 2026</h3>
@@ -156,7 +211,7 @@
         </div>
 
         <div class="footer">
-            <p>Praying with you from Nicaragua 🙏</p>
+            <p>🙏 Praying Together • Serving in Nicaragua • Glorifying Christ 🙏</p>
         </div>
     </div>
 </body>
