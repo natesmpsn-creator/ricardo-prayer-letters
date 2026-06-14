@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Portillo - Prayer Letters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .current-letter {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .current-letter h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .current-letter p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .current-letter a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+
+        .current-letter a:hover {
+            background: #764ba2;
+        }
+
+        .archive {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .archive h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .letter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .letter-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .letter-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .letter-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .letter-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .letter-card a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 Ricardo Portillo's Prayer Letters</h1>
+            <p>Ministry Updates from Nicaragua</p>
+        </div>
+
+        <div class="current-letter">
+            <h2>Latest Prayer Letter</h2>
+            <p>Welcome! Below you can read the latest prayer letter and browse past updates from Ricardo's ministry work in Nicaragua.</p>
+            <a href="letters/2026-06.html">Read Current Letter →</a>
+        </div>
+
+        <div class="archive">
+            <h2>📚 Archive</h2>
+            <div class="letter-grid">
+                <div class="letter-card">
+                    <h3>June 2026</h3>
+                    <a href="letters/2026-06.html">View Letter →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Praying with you from Nicaragua 🙏</p>
+        </div>
+    </div>
+</body>
+</html>
