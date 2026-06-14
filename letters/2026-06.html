@@ -3,124 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Portillo Family - Prayer Letter</title>
+    <title>The Portillo Family - June 2026 Prayer Letter</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
-            line-height: 1.7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
-            background: #f5f5f5;
-            padding: 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 8.5in;
             margin: 0 auto;
             background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
         }
         .header {
-            background: linear-gradient(135deg, #2d7a4e 0%, #4a9d6f 100%);
+            background: linear-gradient(135deg, #5a9467 0%, #4a8557 100%);
             color: white;
-            padding: 50px 30px;
+            padding: 30px;
             text-align: center;
+            position: relative;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
-            font-weight: 600;
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
         .header p {
-            font-size: 1.1em;
-            opacity: 0.95;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 300;
         }
         .content {
-            padding: 40px 35px;
+            display: flex;
+            flex: 1;
+            overflow: hidden;
         }
-        h2 {
-            background: #4a9d6f;
+        .sidebar {
+            width: 30%;
+            background: #f5f5f5;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+        .sidebar-section h3 {
+            background: #5a9467;
             color: white;
-            padding: 12px 18px;
-            margin: 30px 0 15px 0;
-            border-radius: 4px;
-            font-size: 1.3em;
-            font-weight: 600;
-        }
-        h2:first-of-type {
-            margin-top: 0;
-        }
-        p {
-            margin-bottom: 15px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-        ul {
-            margin: 15px 0 15px 25px;
-            list-style: none;
-        }
-        ul li {
+            padding: 10px;
             margin-bottom: 10px;
-            padding-left: 20px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .sidebar-section p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .sidebar-section ul {
+            list-style: none;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .sidebar-section li {
+            margin-bottom: 6px;
+            padding-left: 15px;
             position: relative;
         }
-        ul li:before {
-            content: "▪";
-            color: #4a9d6f;
-            font-weight: bold;
+        .sidebar-section li:before {
+            content: "•";
             position: absolute;
             left: 0;
+            color: #5a9467;
         }
-        .images {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
+        .contact-info {
+            background: white;
+            padding: 12px;
+            border-left: 4px solid #5a9467;
+            font-size: 11px;
+            line-height: 1.8;
         }
-        .images h2 {
-            background: #4a9d6f;
+        .main {
+            width: 70%;
+            padding: 25px;
+            overflow-y: auto;
         }
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .main h2 {
+            color: #5a9467;
+            font-size: 16px;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
-        .image-item {
-            text-align: center;
-            background: #f9f9f9;
-            padding: 8px;
-            border-radius: 4px;
+        .main p {
+            font-size: 12px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .photo-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            justify-content: flex-start;
+        }
+        .photo-item {
+            flex: 0 0 calc(50% - 5px);
+            max-height: 120px;
+            overflow: hidden;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border: 1px solid #ddd;
         }
-        .image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 3px;
-            display: block;
-        }
-        .image-item p {
-            font-size: 0.8em;
-            color: #666;
-            margin-top: 6px;
-            text-align: center;
+        .opening {
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #555;
         }
         .closing {
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 1.8;
         }
         .signature {
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: 600;
-            color: #2d7a4e;
+            font-size: 12px;
         }
-        .footer {
-            background: #f9f9f9;
-            text-align: center;
-            padding: 15px;
-            color: #999;
-            font-size: 0.85em;
-            border-top: 1px solid #ddd;
+        @media print {
+            body { margin: 0; padding: 0; }
+            .container { box-shadow: none; margin: 0; }
         }
     </style>
 </head>
@@ -128,100 +161,102 @@
     <div class="container">
         <div class="header">
             <h1>The Portillo Family</h1>
-            <p>Nicaragua • Central America</p>
+            <p>Nicaragua - Central America</p>
         </div>
+
         <div class="content">
-<p>Dear Friends and Prayer Partners,</p>
-<p>Greetings from Nicaragua! I want to share some wonderful updates from this month's work and ministry.</p>
-<h2>Ministry Updates</h2>
-<p>Tracking updates from Ricardo throughout June for compilation into the prayer letter.</p>
-<h2>Praise Points</h2>
-<ul><li>**Mother's Day Service** (June 13) — Special service celebrating mothers in ministry. Photos captured of the service and celebration.</li>
-<li>**Construction and Remodel Progress** (June 13) — New on-ramp into the property is being constructed. Main auditorium beautifully upgraded with new audio visual booth. Multiple photos documenting the improvements.</li>
-</ul><h2>Upcoming Events</h2>
-<p>(To be filled as entries arrive)</p>
-<h2>Ministry Updates</h2>
-<p>(To be filled as entries arrive)</p>
-<h2>Prayer Requests</h2>
-<p>(To be filled as entries arrive)</p>
-<h2>Photos/Media</h2>
-<ul><li>`2026-06-13-mothers-day-service-IMG_3517.png` — Mother's Day service photos (2.0 MB)</li>
-<li>`2026-06-13-mothers-day-service-Screenshot.jpg` — Mother's Day service screenshot (140 KB)</li>
-<li>`2026-06-13-mothers-day-service-Screenshot2.jpg` — Mother's Day service screenshot (161 KB)</li>
-<li>`2026-06-13-mothers-day-service-IMG_2285.jpg` — Mother's Day service photos (378 KB)</li>
-<li>`2026-06-13-construction-remodel-01.png` — Construction/remodel progress (5.0 MB)</li>
-<li>`2026-06-13-construction-remodel-02.png` — Construction/remodel progress (4.4 MB)</li>
-<li>`2026-06-13-construction-remodel-03.png` — Construction/remodel progress (5.0 MB)</li>
-<li>`2026-06-13-construction-remodel-04.png` — Construction/remodel progress (9.0 MB)</li>
-<li>`2026-06-13-construction-remodel-05.png` — Construction/remodel progress (7.9 MB)</li>
-</ul><p>Hello</p>
-<p>Did you get the VBS and teen conference note?</p>
-<p>Together with the news about Mother’s Day I would like to mention how a lady from our church has been learning signing and had the privilege of leading first person to Christ using sign</p>
-<h2>How You Can Pray</h2>
-<ul><li>For continued wisdom in all ministry decisions</li>
-<li>For protection and health of the team</li>
-<li>For open hearts among those we serve</li>
-<li>For wisdom in future ministry planning</li>
-</ul><p>Thank you for your faithful prayers and support.</p>
-<p>Blessings,</p>
-<p>Ricardo Portillo</p>
-
-        <div class="images">
-            <h2>📷 Photos & Updates</h2>
-            <div class="image-gallery">
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-construction-remodel-01.png" alt="2026-06-13-construction-remodel-01.png">
-                    <p>2026-06-13-construction-remodel-01.png</p>
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Praise Points</h3>
+                    <ul>
+                        <li>God's faithfulness in ministry</li>
+                        <li>Community engagement and growth</li>
+                        <li>Facility improvements and resources</li>
+                        <li>Spiritual breakthroughs and conversions</li>
+                    </ul>
                 </div>
 
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-construction-remodel-02.png" alt="2026-06-13-construction-remodel-02.png">
-                    <p>2026-06-13-construction-remodel-02.png</p>
+                <div class="sidebar-section">
+                    <h3>Upcoming Events</h3>
+                    <p>Exciting ministry opportunities continuing throughout June 2026. More details coming soon!</p>
                 </div>
 
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-construction-remodel-03.png" alt="2026-06-13-construction-remodel-03.png">
-                    <p>2026-06-13-construction-remodel-03.png</p>
+                <div class="sidebar-section">
+                    <h3>Prayer Requests</h3>
+                    <ul>
+                        <li>Wisdom and resources for ministry</li>
+                        <li>Continued spiritual growth</li>
+                        <li>Protection and guidance for families</li>
+                        <li>Openness to the Gospel message</li>
+                    </ul>
                 </div>
 
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-construction-remodel-04.png" alt="2026-06-13-construction-remodel-04.png">
-                    <p>2026-06-13-construction-remodel-04.png</p>
+                <div class="contact-info">
+                    <strong>Contact Us</strong><br><br>
+                    Ricardo Portillo<br>
+                    Nicaragua Ministry<br><br>
+                    <strong>Church Location</strong><br>
+                    Serving the community of Nicaragua with the Gospel of Jesus Christ
                 </div>
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-construction-remodel-05.png" alt="2026-06-13-construction-remodel-05.png">
-                    <p>2026-06-13-construction-remodel-05.png</p>
-                </div>
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-mothers-day-service-IMG_2285.jpg" alt="2026-06-13-mothers-day-service-IMG_2285.jpg">
-                    <p>2026-06-13-mothers-day-service-IMG_2285.jpg</p>
-                </div>
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-mothers-day-service-IMG_3517.png" alt="2026-06-13-mothers-day-service-IMG_3517.png">
-                    <p>2026-06-13-mothers-day-service-IMG_3517.png</p>
-                </div>
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-mothers-day-service-Screenshot.jpg" alt="2026-06-13-mothers-day-service-Screenshot.jpg">
-                    <p>2026-06-13-mothers-day-service-Screenshot.jpg</p>
-                </div>
-
-                <div class="image-item">
-                    <img src="./images/2026-06/2026-06/2026-06-13-mothers-day-service-Screenshot2.jpg" alt="2026-06-13-mothers-day-service-Screenshot2.jpg">
-                    <p>2026-06-13-mothers-day-service-Screenshot2.jpg</p>
-                </div>
-
             </div>
-        </div>
 
-        </div>
+            <div class="main">
+                <p class="opening">Dear Prayer Partners in Christ,</p>
 
-        <div class="footer">
-            Prayer Letter • June 2026
+                <p>Grace and peace to you from the Portillo family. We continue to be abundantly blessed by your faithful prayers and generous support as we serve Christ here in Nicaragua. Thank you for standing with us in ministry.</p>
+
+                <h2>Celebrating God's Faithfulness</h2>
+
+                <p>Throughout June 2026, we have been reminded of God's incredible faithfulness in our lives and ministry. From special services to community outreach, we have witnessed His hand at work. Our church family continues to grow in faith and dedication to serving our neighbors with the love of Christ.</p>
+
+                <h2>Ministry Updates</h2>
+
+                <p>We are excited about the progress God is enabling in our facilities and outreach programs. From infrastructure improvements to expanded ministry capabilities, we see God providing what we need to serve more effectively. These blessings are a testimony to His provision and our community's commitment to advancing the Gospel.</p>
+
+                <div class="photo-section">
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-construction-remodel-01.png" alt="2026-06-13-construction-remodel-01.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-construction-remodel-02.png" alt="2026-06-13-construction-remodel-02.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-construction-remodel-03.png" alt="2026-06-13-construction-remodel-03.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-construction-remodel-04.png" alt="2026-06-13-construction-remodel-04.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-construction-remodel-05.png" alt="2026-06-13-construction-remodel-05.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-mothers-day-service-IMG_2285.jpg" alt="2026-06-13-mothers-day-service-IMG_2285.jpg">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-mothers-day-service-IMG_3517.png" alt="2026-06-13-mothers-day-service-IMG_3517.png">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-mothers-day-service-Screenshot.jpg" alt="2026-06-13-mothers-day-service-Screenshot.jpg">
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/2026-06/2026-06-13-mothers-day-service-Screenshot2.jpg" alt="2026-06-13-mothers-day-service-Screenshot2.jpg">
+                    </div>
+                </div>
+
+                <h2>Building for Ministry Growth</h2>
+
+                <p>God continues to provide resources for important facility improvements to serve our community better. We are grateful for His provision as we invest in spaces that enable worship, fellowship, and Gospel proclamation. These improvements enhance our worship experience and expand our ministry capabilities for reaching more people with the love of Christ.</p>
+
+                <div class="closing">
+                    <p>Thank you for your partnership in the Gospel. Your prayers, support, and encouragement mean more than words can express. We covet your continued intercession as we seek to glorify Christ and advance His Kingdom here in Central America.</p>
+
+                    <div class="signature">
+                        In Christ's service,<br><br>
+                        Ricardo & Family<br>
+                        Nicaragua Ministry
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
